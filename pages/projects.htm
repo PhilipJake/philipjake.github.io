@@ -23,6 +23,9 @@
             
             // Block Ctrl+U or Cmd+U (View Page Source)
             if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U')) e.preventDefault();
+
+            // Block Ctrl+S or Cmd+S (Save Page Sourcw)
+            if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) e.preventDefault();
         });
     </script>
     <!-- Sci-Fi Google Fonts -->
