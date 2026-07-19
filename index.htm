@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio // Cyber HUD Matrix</title>
+    <!-- Sci-Fi Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Upper Control Navigation -->
+    <div class="nav-back-container">
+        <a href="pages/projects.htm" class="nav-back">// VIEW ALL PROJECTS</a>
+    </div>
+
+    
+    <section class="hud-section">
+        <h1>PhilipJake.<span class="accent-text">IO</span></h1>
+        <p>System operational matrix deployed to orchestrate core automation protocols and maximize enterprise infrastructure efficiency.</p>
+        <p>Specializing in the development of lightweight utility programs engineered to ingest critical system telemetry, accelerate data retrieval cycles, and eliminate processing delays across desktop and network environments.</p>
+    </section>
+
+    <!-- Section 2: Technical Engine Ring -->
+    <section class="hud-section">
+        <h2>Which Language <span class="accent-text">I Use</span></h2>
+        <div class="flex-container">
+            <!-- Vector Circular Telemetry Module -->
+            <div class="dial-wrapper">
+                <svg class="dial-svg" viewBox="0 0 180 180">
+                    <circle class="dial-track" cx="90" cy="90" r="80" />
+                    <circle class="dial-active" cx="90" cy="90" r="80" />
+                    <circle class="dial-ring-outer" cx="90" cy="90" r="72" />
+                    <circle class="dial-ring-inner" cx="90" cy="90" r="64" />
+                </svg>
+                <div class="dial-text">
+                    <span id="cycleLang">&lt; HTML &gt;</span>
+                    <span id="cycleType" class="dial-subtext">CORE_STACK</span>
+                </div>
+            </div>
+            
+            <div class="flex-child">
+                <h3>Infrastructure Automation Engine</h3>
+                <p>Engineering lightweight native compilation programs designed to scrape, aggregate, and parse system hardware telemetry data across enterprise networks.</p>
+                <p>Optimizing operational efficiency by building automated workflow pipelines that eliminate manual processing bottlenecks and accelerate information gathering cycles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: MOCKUP SPLIT GRID ARCHITECTURE -->
+    <section class="hud-section display-split-grid">
+        
+                <!-- LEFT PANEL COLUMN: PROJECT DESCRIPTION MATRIX -->
+        <div class="panel-left-column">
+            <h2>Project <span class="accent-text">Goal</span></h2>
+            <p class="section-intro-text">Developing automation systems engineered to scale efficiency metrics while eliminating system logging overhead constraints.</p>
+            
+            <!-- Dynamic Vector Animated Core HUD Container -->
+            <div class="feature-box">
+                
+                <!-- FIXED TRACER ENGINE: Uses explicit pixel viewBox matching the container aspect bounds -->
+                <svg class="hud-border-svg" viewBox="0 0 450 320">
+                    <!-- Complete mathematical perimeter path trace matching your exact image cutouts -->
+                    <path d="M 1,1 L 415,1 L 449,35 L 449,319 L 35,319 L 1,285 Z" />
+                </svg>
+
+                <!-- Index Box Indicator Widget -->
+                <div class="index-badge-node">STAGE // 01</div>
+                
+                <h3 id="goalTitle">Saving Time & Resources</h3>
+                
+                <div class="goal-slider-wrapper">
+                    <p id="goalSlide1">Architecting custom software tools engineered to abstract manual database entries and eliminate human operational friction across technical departments.</p>
+                    <p id="goalSlide2" style="display: none;">The primary execution directive focuses on scaling down resource expenditure by automating hardware configuration collection, turning multi-hour diagnostic sweeps into instant background scripts.</p>
+                </div>
+                
+                <!-- Action Navigation Triggers -->
+                <div class="panel-nav">
+                    <a href="javascript:void(0)" id="prevGoalBtn" class="hud-btn-link">&lt; PREVIOUS</a>
+                    <a href="javascript:void(0)" id="nextGoalBtn" class="hud-btn-link">NEXT &gt;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL COLUMN: PROJECT PREVIEWS MATRIX -->
+        <div class="panel-right-column">
+            <h2>Project <span class="accent-text">Previews</span></h2>
+            
+            <!-- Dynamic Project Title Context Holder -->
+            <p class="section-intro-text">Active Module: <span id="wireframeTitle" class="accent-text" style="font-weight: bold; font-family: 'Orbitron', sans-serif;">System Checker</span></p>
+            
+            <!-- Target Crosshair Bracket Image Wrapper -->
+            <div class="wireframe-hud-box">
+                <div class="bracket-corner tl"></div>
+                <div class="bracket-corner tr"></div>
+                <div class="bracket-corner bl"></div>
+                <div class="bracket-corner br"></div>
+                
+                <div class="wireframe-subtitle">// INTERFACE PREVIEW //</div>
+                
+                <!-- Responsive Dynamic Image Display Container Asset -->
+                <div class="preview-image-container">
+                    <img id="projectPreviewImg" src="images/previews/system_checker.png" alt="Project Interface Preview" />
+                </div>
+                
+                <div class="wireframe-subtitle">// CLICK TO ENLARGE //</div>
+            </div>
+
+            <!-- Lower Action Project Node Step Links -->
+            <div class="project-navigation-footer">
+                <a href="javascript:void(0)" id="prevProjectBtn" class="nav-arrow">&lt; PREVIOUS PROJECT</a>
+                <a href="javascript:void(0)" id="nextProjectBtn" class="nav-arrow">NEXT PROJECT &gt;</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer System Metatags Label -->
+    <footer class="hud-section system-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-meta-flex">
+            <span>SYS_REF: PHILIPJAKE_CORE_v2.0.6</span>
+            <span>TERMS // DATA_SECURITY // PRIVACY</span>
+        </div>
+    </footer>
+
+    <!-- FULL-SCREEN HUD SCREENSHOT LIGHTBOX MODAL OVERLAY -->
+    <div id="hudImageModal" class="hud-modal">
+        <div class="modal-close-trigger" onclick="closeHudModal()">[ ESCAPE // CLOSE_INTERFACE ]</div>
+        
+        <div class="modal-content-frame">
+            <span class="modal-bracket tl"></span>
+            <span class="modal-bracket tr"></span>
+            <span class="modal-bracket bl"></span>
+            <span class="modal-bracket br"></span>
+            
+            <img id="modalTargetImg" src="" alt="High Definition System Scan Screenshot" />
+        </div>
+    </div>
+
+    <script src="js/telemetry.js"></script>
+</body>
+</html>

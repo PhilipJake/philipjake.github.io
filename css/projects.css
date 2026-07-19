@@ -1,0 +1,107 @@
+/* ==========================================================================
+   SUBPAGE PORTFOLIO GRID ARCHITECTURE STYLES (RESTORED FLUID WIDE FORMAT)
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: rgba(6, 11, 15, 0.4);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 35px 30px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%; /* KEEPING LAYOUT THE SAME: Restored true wide fluid capabilities */
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; 
+    border: 1px solid transparent; /* No outlines visible at rest */
+    
+    /* Original geometric cut bottom-right */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+/* Selected layout block rises forward when hovered */
+.project-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0, 255, 102, 0.15);
+    z-index: 5;
+}
+
+/* VECTOR LAYER CONTEXT POSITIONING */
+.card-border-svg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0; /* Completely hidden by default */
+    transition: opacity 0.25s ease;
+}
+
+.card-border-svg path {
+    fill: none;
+    stroke: var(--neon-green);
+    stroke-width: 3px; /* Strong line weight matching your snapshot */
+    vector-effect: non-scaling-stroke; 
+    filter: drop-shadow(0px 0px 5px var(--neon-green));
+}
+
+/* Triggers animation and visibility strings ONLY on active card cursor hover */
+.project-card:hover .card-border-svg {
+    opacity: 1;
+}
+
+.project-card:hover .card-border-svg path {
+    /* Driven by the dynamic offset size provided by the automated JavaScript loop */
+    animation: traceLaserHUD 5s linear infinite;
+}
+
+@keyframes traceLaserHUD {
+    0% { stroke-dashoffset: var(--perimeter-length, 1000); }
+    100% { stroke-dashoffset: 0; }
+}
+
+/* Inner Text Layout Regulators */
+.project-card p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.panel-nav {
+    margin-top: auto;
+}
+
+/* Card inner text elements details */
+.card-node-id {
+    font-size: 0.75rem;
+    color: var(--neon-green);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-family: 'Orbitron', sans-serif;
+}
+.card-tech-stack {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 15px 0 25px 0;
+    border-top: 1px dashed rgba(0, 58, 24, 0.4);
+    padding-top: 15px;
+}
+.tech-pill {
+    font-size: 0.75rem;
+    border: 1px solid var(--border-dim);
+    padding: 2px 8px;
+    background: rgba(0, 255, 102, 0.02);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+.project-card:hover .tech-pill {
+    border-color: rgba(0, 255, 102, 0.4);
+    color: var(--neon-green);
+}
