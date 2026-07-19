@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects // Portfolio</title>
+
+    <!-- HIGH PRIORITY INLINE ANTI-TAMPER SECURITY NODE -->
+    <script>
+        // 1. Disable Right-Click context menus instantly
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        // 2. Intercept keyboard overrides immediately before browser default hooks lock in
+        document.addEventListener('keydown', (e) => {
+            // Block F12 Function Key
+            if (e.key === 'F12') e.preventDefault();
+            
+            // Block Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Element picker)
+            if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) e.preventDefault();
+            
+            // Block Command+Option+I on macOS systems
+            if (e.metaKey && e.altKey && (e.key === 'i' || e.key === 'I')) e.preventDefault();
+            
+            // Block Ctrl+U or Cmd+U (View Page Source)
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U')) e.preventDefault();
+        });
+    </script>
     <!-- Sci-Fi Google Fonts -->
     <link href="https://googleapis.com" rel="stylesheet">
     <!-- Links backward cleanly into your global master stylesheet -->
